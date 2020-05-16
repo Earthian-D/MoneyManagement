@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <title>理财小助手</title>
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。")
+   			
+   		});
+    </script>
+</head>
+<body>
+	<div id="bk" >	
+		<img src="./img/bk1.jpg" v-bind:style="imgStyle"/>
+	</div>
+	<script type="text/javascript">
+		var bkVue=new Vue({
+			el:"#bk",
+			computed:{
+				imgStyle:function(){
+					return{
+						height:window.screen.height+"px",
+						width:window.screen.width +"px"
+					}
+				}
+			}
+		})
+	</script>
+</body>
+</html>
